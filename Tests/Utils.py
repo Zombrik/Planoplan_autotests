@@ -1,7 +1,15 @@
-import os, signal, time, psutil, subprocess, pyautogui, imaplib, email
+import email
+import imaplib
+import os
+import psutil
+import pyautogui
+import signal
+import subprocess
+import time
+from email.header import decode_header
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from email.header import decode_header
 
 
 def del_file(path_file):
@@ -198,3 +206,4 @@ def kod_podtverjdenia():  # Проверяем приходит ли на поч
     print(subject_letter)
     if subject_letter.find("Ваш код:") == 1:
         return "Letter inbox"
+
