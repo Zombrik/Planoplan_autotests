@@ -208,7 +208,7 @@ def kod_podtverjdenia():  # Проверяем приходит ли на поч
         return "Letter inbox"
 
 
-def new_project():
+def new_project(): # Новый проект
     subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
     pyautogui.PAUSE = 1.5
     del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
@@ -224,3 +224,40 @@ def new_project():
     pyautogui.click(pyautogui.locateOnScreen('Picture/dobavit_proekt.jpg', confidence=0.9))
     wait_image('Picture/nachat_s_nulia.jpg')
     pyautogui.click(pyautogui.locateOnScreen('Picture/nachat_s_nulia.jpg', confidence=0.9))
+
+
+def wall_construction_by_edge(): # Построение комнаты методом по краю
+    new_project()
+    pyautogui.PAUSE = 1.5
+    pyautogui.click(400, 300)
+    pyautogui.click(1500, 300)
+    pyautogui.click(1500, 800)
+    pyautogui.click(400, 800)
+    pyautogui.click(400, 300)
+    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+        a = "good"
+    return a
+
+
+def wall_construction_by_center():  # Построение комнаты методом по краю
+    pyautogui.PAUSE = 1.5
+    pyautogui.mouseDown(button='right')
+    pyautogui.click()
+    pyautogui.mouseDown(button='left')
+    #pyautogui.doubleClick(350, 250)
+    pyautogui.click(x=350, y=280, clicks=2, interval=1)
+    pyautogui.dragTo(1550, 850, 2)
+    pyautogui.press('Delete')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia.jpg', confidence=0.9))
+    pyautogui.moveRel(0, 50, 2)
+    pyautogui.click()
+    pyautogui.click(400, 300)
+    pyautogui.click(1500, 300)
+    pyautogui.click(1500, 800)
+    pyautogui.click(400, 800)
+    pyautogui.click(400, 300)
+    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+        a = "good"
+    return a
+
+
