@@ -1,0 +1,8 @@
+Remove from adminpanel next users:
+
+1. piatigorsky1985@gmail.com
+2. andrey_testov@bk.ru
+3. test_arhist@mail.ru
+
+Login in VK by andrey_testov@bk.ru
+Login in google by piatigorsky1985@gmail.com
