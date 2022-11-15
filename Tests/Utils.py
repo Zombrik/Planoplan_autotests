@@ -207,3 +207,20 @@ def kod_podtverjdenia():  # Проверяем приходит ли на поч
     if subject_letter.find("Ваш код:") == 1:
         return "Letter inbox"
 
+
+def new_project():
+    subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
+    pyautogui.PAUSE = 1.5
+    del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
+    os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
+    wait_image('Picture/vhod.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/vhod.jpg', confidence=0.9))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_email.jpg', confidence=0.9))
+    pyautogui.write('test_arhist@mail.ru', interval=0.2)
+    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_parol.jpg', confidence=0.9))
+    pyautogui.write('123456', interval=0.2)
+    pyautogui.click(pyautogui.locateOnScreen('Picture/voiti.jpg', confidence=0.9))
+    wait_image('Picture/dobavit_proekt.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/dobavit_proekt.jpg', confidence=0.9))
+    wait_image('Picture/nachat_s_nulia.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/nachat_s_nulia.jpg', confidence=0.9))
