@@ -236,20 +236,17 @@ def wall_construction_by_edge(): # Построение комнаты мето�
     pyautogui.click(400, 300)
     if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
         a = "good"
+    pyautogui.click(button='right')
     return a
 
 
 def wall_construction_by_center():  # Построение комнаты методом по краю
     pyautogui.PAUSE = 1.5
-    pyautogui.mouseDown(button='right')
-    pyautogui.click()
-    pyautogui.mouseDown(button='left')
-    #pyautogui.doubleClick(350, 250)
-    pyautogui.click(x=350, y=280, clicks=2, interval=1)
-    pyautogui.dragTo(1550, 850, 2)
+    pyautogui.click(x=300, y=200, clicks=2, interval=1)
+    pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia.jpg', confidence=0.9))
-    pyautogui.moveRel(0, 50, 2)
+    pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.9))
+    pyautogui.moveRel(0, 50, 1)
     pyautogui.click()
     pyautogui.click(400, 300)
     pyautogui.click(1500, 300)
@@ -258,6 +255,9 @@ def wall_construction_by_center():  # Построение комнаты мет
     pyautogui.click(400, 300)
     if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
         a = "good"
+    pyautogui.click(button='right')
     return a
+
+
 
 

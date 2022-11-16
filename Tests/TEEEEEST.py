@@ -1,4 +1,4 @@
 import pyautogui
 
+pyautogui.click(button='right')
 
-print(pyautogui.position())
