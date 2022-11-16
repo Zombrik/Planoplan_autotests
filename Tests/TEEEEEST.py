@@ -1,4 +1,6 @@
-import pyautogui
+from Utils import *
 
-pyautogui.click(button='right')
+
+wall_construction_by_room()
+
 

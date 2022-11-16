@@ -7,3 +7,9 @@ def test_wall_constr_by_edge():
 
 def test_wall_constr_by_center():
     assert wall_construction_by_center() == 'good'
+
+
+def test_wall_constr_by_room():
+    assert wall_construction_by_room() == 'good'
+
+

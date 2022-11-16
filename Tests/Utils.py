@@ -259,5 +259,19 @@ def wall_construction_by_center():  # Построение комнаты мет
     return a
 
 
+def wall_construction_by_room():  # Построение комнаты методом по краю
+    pyautogui.PAUSE = 1.5
+    pyautogui.click(x=300, y=200, clicks=2, interval=1)
+    pyautogui.dragTo(1600, 900, 2)
+    pyautogui.press('Delete')
+    pyautogui.doubleClick(pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.8))
+    pyautogui.moveRel(0, 100, 2)
+    pyautogui.click()
+    pyautogui.click(400, 300)
+    pyautogui.click(1500, 800)
+    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+        a = "good"
+    pyautogui.click(button='right')
+    return a
 
 
