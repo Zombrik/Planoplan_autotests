@@ -240,7 +240,7 @@ def wall_construction_by_edge(): # Построение комнаты мето�
     return a
 
 
-def wall_construction_by_center():  # Построение комнаты методом по краю
+def wall_construction_by_center():  # Построение комнаты методом по центру
     pyautogui.PAUSE = 1.5
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
@@ -259,7 +259,7 @@ def wall_construction_by_center():  # Построение комнаты мет
     return a
 
 
-def wall_construction_by_room():  # Построение комнаты методом по краю
+def wall_construction_by_room():  # Построение комнаты методом комнатой
     pyautogui.PAUSE = 1.5
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
@@ -270,6 +270,24 @@ def wall_construction_by_room():  # Построение комнаты мето
     pyautogui.click(400, 300)
     pyautogui.click(1500, 800)
     if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+        a = "good"
+    pyautogui.click(button='right')
+    return a
+
+
+def wall_construction_drywall():  # Построение фальш стены
+    pyautogui.PAUSE = 1.5
+    pyautogui.click(x=300, y=200, clicks=2, interval=1)
+    pyautogui.dragTo(1600, 900, 2)
+    pyautogui.press('Delete')
+    pyautogui.doubleClick(pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.8))
+    pyautogui.moveRel(0, 150, 2)
+    pyautogui.click()
+    pyautogui.click(500, 500)
+    pyautogui.click(1500, 500)
+    pyautogui.moveRel(-50, 0, 1)
+    pyautogui.click()
+    if pyautogui.locateOnScreen('Picture/Nastroiki_falsh_steni.jpg', confidence=0.8):
         a = "good"
     pyautogui.click(button='right')
     return a

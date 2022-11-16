@@ -1,6 +1,7 @@
 from Utils import *
 
-
-wall_construction_by_room()
+p = pyautogui
+p.click()
+p.press("2")
 
 

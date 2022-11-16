@@ -13,3 +13,7 @@ def test_wall_constr_by_room():
     assert wall_construction_by_room() == 'good'
 
 
+def test_wall_construction_drywall():
+    assert wall_construction_drywall() == 'good'
+
+
