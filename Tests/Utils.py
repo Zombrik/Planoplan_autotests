@@ -229,6 +229,11 @@ def new_project(): # Новый проект
 def wall_construction_by_edge(): # Построение комнаты методом по краю
     new_project()
     pyautogui.PAUSE = 1.5
+    if pyautogui.locateOnScreen('Picture/metod_postroenia.jpg', confidence=0.8):
+        pass
+    else:
+        pyautogui.click(500, 500)
+        pyautogui.press('3')
     pyautogui.click(400, 300)
     pyautogui.click(1500, 300)
     pyautogui.click(1500, 800)
@@ -245,9 +250,13 @@ def wall_construction_by_center():  # Построение комнаты мет
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.9))
-    pyautogui.moveRel(0, 50, 1)
-    pyautogui.click()
+    if pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.9))
+        pyautogui.moveRel(0, 50, 1)
+        pyautogui.click()
+    else:
+        pyautogui.click(500, 500)
+        pyautogui.press('2')
     pyautogui.click(400, 300)
     pyautogui.click(1500, 300)
     pyautogui.click(1500, 800)
@@ -264,9 +273,13 @@ def wall_construction_by_room():  # Построение комнаты мето
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    pyautogui.doubleClick(pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.8))
-    pyautogui.moveRel(0, 100, 2)
-    pyautogui.click()
+    if pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.9))
+        pyautogui.moveRel(0, 100, 2)
+        pyautogui.click()
+    else:
+        pyautogui.click(500, 500)
+        pyautogui.press('4')
     pyautogui.click(400, 300)
     pyautogui.click(1500, 800)
     if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
@@ -280,9 +293,13 @@ def wall_construction_drywall():  # Построение фальш стены
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    pyautogui.doubleClick(pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.8))
-    pyautogui.moveRel(0, 150, 2)
-    pyautogui.click()
+    if pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.9))
+        pyautogui.moveRel(0, 150, 2)
+        pyautogui.click()
+    else:
+        pyautogui.click(500, 500)
+        pyautogui.press('4')
     pyautogui.click(500, 500)
     pyautogui.click(1500, 500)
     pyautogui.moveRel(-50, 0, 1)
