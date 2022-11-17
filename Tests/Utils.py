@@ -72,7 +72,7 @@ def download_file(proc_name):
     subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
     del_file("C:/Users/piati/Downloads/PlanoplanEditorSetup.exe")
     chrome_Options = webdriver.ChromeOptions()
-    prefs = {'safebrowsing.enabled': 'false'}
+    prefs = {'safebrowsing.enabled': 'false'} # Отключение безопасного режима в хроме
     chrome_Options.add_experimental_option("prefs", prefs)
     browser = webdriver.Chrome(options=chrome_Options)
     browser.get('https://planoplan.com/ru/', )
@@ -308,5 +308,9 @@ def wall_construction_drywall():  # Построение фальш стены
         a = "good"
     pyautogui.click(button='right')
     return a
+
+
+
+
 
 
