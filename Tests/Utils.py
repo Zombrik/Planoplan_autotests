@@ -116,19 +116,19 @@ def registration():
     pyautogui.PAUSE = 1.5
     del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
     os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
-    wait_image('Picture/vvedite_vash_email.jpg')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_email.jpg', confidence=0.8))
+    wait_image('Picture/placeholder_enter_your_email.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_email.jpg', confidence=0.8))
     pyautogui.write('test_arhist@mail.ru', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/pridumaite_vash_parol.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_think_up_your_password.jpg', confidence=0.8))
     pyautogui.write("!qazxsw23edc", interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/zaregistrirovasia.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_sign_up.jpg', confidence=0.8))
     time.sleep(10)
     subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
     os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
-    wait_image('Picture/propustit_shag.jpg')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/propustit_shag.jpg', confidence=0.8))
+    wait_image('Picture/button_small_skip_the_step.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_small_skip_the_step.jpg', confidence=0.8))
     time.sleep(10)
-    if pyautogui.locateOnScreen('Picture/nachat_s_nulia.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/button_start_from_scratch.jpg', confidence=0.8):
         return "trial"
 
 
@@ -137,19 +137,19 @@ def registration_google():
     pyautogui.PAUSE = 1.5
     del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
     os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
-    wait_image("Picture/google.jpg")
-    pyautogui.click(pyautogui.locateOnScreen('Picture/google.jpg', confidence=0.8))
-    wait_image("Picture/opros_01.jpg")
-    pyautogui.click(pyautogui.locateOnScreen('Picture/drugoe.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_variant.jpg', confidence=0.8))
+    wait_image("Picture/button_icon_google.jpg")
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_icon_google.jpg', confidence=0.8))
+    wait_image("Picture/title_please_tell_us_about_yourself .jpg")
+    pyautogui.click(pyautogui.locateOnScreen('Picture/radio_buttens_other.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_option.jpg', confidence=0.8))
     pyautogui.write('test', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/progolgit.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/drugoe.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_variant.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_continue.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/radio_buttens_other.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_option.jpg', confidence=0.8))
     pyautogui.write('test', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/progolgit.jpg', confidence=0.8))
-    wait_image('Picture/obuchenie.jpg')
-    if pyautogui.locateOnScreen('Picture/obuchenie.jpg', confidence=0.8):
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_continue.jpg', confidence=0.8))
+    wait_image('Picture/title_education.jpg')
+    if pyautogui.locateOnScreen('Picture/title_education.jpg', confidence=0.8):
         return "obuchenie"
     subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
 
@@ -159,19 +159,19 @@ def registration_vk():
     pyautogui.PAUSE = 1.5
     del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
     os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
-    wait_image("Picture/vk.jpg")
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vk.jpg', confidence=0.8))
-    wait_image("Picture/opros_01.jpg")
-    pyautogui.click(pyautogui.locateOnScreen('Picture/drugoe.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_variant.jpg', confidence=0.8))
+    wait_image("Picture/button_icon_vk.jpg")
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_icon_vk.jpg', confidence=0.8))
+    wait_image("Picture/title_please_tell_us_about_yourself .jpg")
+    pyautogui.click(pyautogui.locateOnScreen('Picture/radio_buttens_other.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_option.jpg', confidence=0.8))
     pyautogui.write('test', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/progolgit.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/drugoe.jpg', confidence=0.8))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_variant.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_continue.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/radio_buttens_other.jpg', confidence=0.8))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_option.jpg', confidence=0.8))
     pyautogui.write('test', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/progolgit.jpg', confidence=0.8))
-    wait_image('Picture/obuchenie.jpg')
-    if pyautogui.locateOnScreen('Picture/obuchenie.jpg', confidence=0.8):
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_continue.jpg', confidence=0.8))
+    wait_image('Picture/title_education.jpg')
+    if pyautogui.locateOnScreen('Picture/title_education.jpg', confidence=0.8):
         return "obuchenie"
     subprocess.call(["taskkill", "/f", "/im", 'planoplan.exe'])
 
@@ -213,23 +213,23 @@ def new_project(): # Новый проект
     pyautogui.PAUSE = 1.5
     del_file("C:/Users/piati/AppData/Local/Temp/Planoplan/PlanoplanEditor/prefs.dat")
     os.startfile("C:/Users/piati/AppData/Local/Planoplan/Planoplan Editor/planoplan.exe")
-    wait_image('Picture/vhod.jpg')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vhod.jpg', confidence=0.9))
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_email.jpg', confidence=0.9))
+    wait_image('Picture/button_small_log_in.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_small_log_in.jpg', confidence=0.9))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_email.jpg', confidence=0.9))
     pyautogui.write('test_arhist@mail.ru', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/vvedite_vash_parol.jpg', confidence=0.9))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/placeholder_enter_your_password.jpg', confidence=0.9))
     pyautogui.write('123456', interval=0.2)
-    pyautogui.click(pyautogui.locateOnScreen('Picture/voiti.jpg', confidence=0.9))
-    wait_image('Picture/dobavit_proekt.jpg')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/dobavit_proekt.jpg', confidence=0.9))
-    wait_image('Picture/nachat_s_nulia.jpg')
-    pyautogui.click(pyautogui.locateOnScreen('Picture/nachat_s_nulia.jpg', confidence=0.9))
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_log_in.jpg', confidence=0.9))
+    wait_image('Picture/button_add_project.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_add_project.jpg', confidence=0.9))
+    wait_image('Picture/button_start_from_scratch.jpg')
+    pyautogui.click(pyautogui.locateOnScreen('Picture/button_start_from_scratch.jpg', confidence=0.9))
 
 
 def wall_construction_by_edge(): # Построение комнаты методом по краю
     new_project()
     pyautogui.PAUSE = 1.5
-    if pyautogui.locateOnScreen('Picture/metod_postroenia.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/toolbar_button_by_edge_active.jpg', confidence=0.8):
         pass
     else:
         pyautogui.click(500, 500)
@@ -239,7 +239,7 @@ def wall_construction_by_edge(): # Построение комнаты мето�
     pyautogui.click(1500, 800)
     pyautogui.click(400, 800)
     pyautogui.click(400, 300)
-    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/menu_room_settinds.jpg', confidence=0.8):
         a = "good"
     pyautogui.click(button='right')
     return a
@@ -250,8 +250,8 @@ def wall_construction_by_center():  # Построение комнаты мет
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    if pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.8):
-        pyautogui.click(pyautogui.locateOnScreen('Picture/metod_postroenia_01.jpg', confidence=0.9))
+    if pyautogui.locateOnScreen('Picture/toolbar_button_by_edge_inactive.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/toolbar_button_by_edge_inactive.jpg', confidence=0.9))
         pyautogui.moveRel(0, 50, 1)
         pyautogui.click()
     else:
@@ -262,7 +262,7 @@ def wall_construction_by_center():  # Построение комнаты мет
     pyautogui.click(1500, 800)
     pyautogui.click(400, 800)
     pyautogui.click(400, 300)
-    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/menu_room_settinds.jpg', confidence=0.8):
         a = "good"
     pyautogui.click(button='right')
     return a
@@ -273,8 +273,8 @@ def wall_construction_by_room():  # Построение комнаты мето
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    if pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.8):
-        pyautogui.click(pyautogui.locateOnScreen('Picture/postroenie_po_centru.jpg', confidence=0.9))
+    if pyautogui.locateOnScreen('Picture/toolbab_button_by_center_inactive.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/toolbab_button_by_center_inactive.jpg', confidence=0.9))
         pyautogui.moveRel(0, 100, 2)
         pyautogui.click()
     else:
@@ -282,7 +282,7 @@ def wall_construction_by_room():  # Построение комнаты мето
         pyautogui.press('4')
     pyautogui.click(400, 300)
     pyautogui.click(1500, 800)
-    if pyautogui.locateOnScreen('Picture/nastroiki_komnati.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/menu_room_settinds.jpg', confidence=0.8):
         a = "good"
     pyautogui.click(button='right')
     return a
@@ -293,8 +293,8 @@ def wall_construction_drywall():  # Построение фальш стены
     pyautogui.click(x=300, y=200, clicks=2, interval=1)
     pyautogui.dragTo(1600, 900, 2)
     pyautogui.press('Delete')
-    if pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.8):
-        pyautogui.click(pyautogui.locateOnScreen('Picture/postroenie_komnatoi.jpg', confidence=0.9))
+    if pyautogui.locateOnScreen('Picture/toolbar_button_by_room_inactive.jpg', confidence=0.8):
+        pyautogui.click(pyautogui.locateOnScreen('Picture/toolbar_button_by_room_inactive.jpg', confidence=0.9))
         pyautogui.moveRel(0, 150, 2)
         pyautogui.click()
     else:
@@ -304,7 +304,7 @@ def wall_construction_drywall():  # Построение фальш стены
     pyautogui.click(1500, 500)
     pyautogui.moveRel(-50, 0, 1)
     pyautogui.click()
-    if pyautogui.locateOnScreen('Picture/Nastroiki_falsh_steni.jpg', confidence=0.8):
+    if pyautogui.locateOnScreen('Picture/menu_wall_settings_drywall.jpg', confidence=0.8):
         a = "good"
     pyautogui.click(button='right')
     return a
